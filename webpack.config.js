@@ -11,9 +11,9 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'] // auto require without these extensions.
   },
-  devtool: 'source-map',
+  devtool: 'source-map', // source map tells chrome dev tools where is the source code the error occured.
   watchOptions: {
     ignored: /node_modules/
   },

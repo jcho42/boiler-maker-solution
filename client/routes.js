@@ -53,8 +53,7 @@ const mapDispatch = dispatch => {
   }
 }
 
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
+// The `withRouter` wrapper gives the route props (match, history, location) to the connected component
 export default withRouter(connect(mapState, mapDispatch)(Routes))
 
 /**

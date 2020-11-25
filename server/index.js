@@ -49,12 +49,12 @@ const createApp = () => {
   app.use(express.urlencoded({extended: true}))
 
   // compression middleware
-  app.use(compression())
+  app.use(compression()) //compress http request smaller
 
   // session middleware with passport
   app.use(
     session({
-      secret: process.env.SESSION_SECRET || 'my best friend is Cody',
+      secret: process.env.SESSION_SECRET, // secret used to generate unique ids for each session
       store: sessionStore,
       resave: false,
       saveUninitialized: false
@@ -120,5 +120,5 @@ async function bootApp() {
 if (require.main === module) {
   bootApp()
 } else {
-  createApp()
+  createApp() // testing
 }
